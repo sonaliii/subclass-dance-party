@@ -27,13 +27,6 @@ YoshiDancer.prototype.step = function(){
       //     duration:50
       // },'linear');
 
-     // this.$node.animate({},{
-     //   flip: function(now,fx) {
-     //     $(this).css('-webkit-transform','rotate('+now+'deg)');
-     //   },
-     //   duration : 'slow'
-     //  }
-     // );
     }
     }
  };

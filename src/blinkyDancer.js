@@ -18,7 +18,6 @@
 var BlinkyDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
   window.dancers.push(this);
-  window.infectMe.push({top:top, left:left, value:this});
   console.log(window.infectMe);
 };
 
