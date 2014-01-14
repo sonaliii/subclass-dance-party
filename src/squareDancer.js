@@ -3,6 +3,7 @@ var SquareDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="square"></span>');
   this.setPosition(top, left);
   this.counter = 0;
+  window.dancers.push(this);
 
 };
 
@@ -36,4 +37,10 @@ SquareDancer.prototype.grow = function(){
     height: 140
   };
   this.$node.css(growing);
+};
+
+SquareDancer.prototype.lineup = function(){
+  this.$node.animate({
+    left: "200"
+  });
 };

@@ -17,6 +17,9 @@
 
 var BlinkyDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
+  window.dancers.push(this);
+  window.infectMe.push({top:top, left:left, value:this});
+  console.log(window.infectMe);
 };
 
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
@@ -25,4 +28,16 @@ BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.step = function(){
    Dancer.prototype.step.apply(this);
    this.$node.toggle();
+};
+
+BlinkyDancer.prototype.lineup = function(){
+  this.$node.animate({
+    left: "50"
+  });
+};
+
+BlinkyDancer.prototype.infect = function(){
+  this.$node.animate({
+    background: "green"
+  });
 };
