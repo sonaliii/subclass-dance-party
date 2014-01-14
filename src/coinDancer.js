@@ -3,6 +3,7 @@ var CoinDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="coin"></span>');
   this.setPosition(top, left);
   window.dancers.push(this);
+  window.coinLocations.push([top, left, this]);
 };
 
 CoinDancer.prototype = Object.create(Dancer.prototype);
