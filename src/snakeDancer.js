@@ -2,7 +2,6 @@ var SnakeDancer = function(top, left, timeBetweenSteps){
   Dancer.apply(this, arguments);
   this.$node = $('<span class="snake"></span>');
   this.setPosition(top, left);
-  this.counter = 0;
 };
 
 SnakeDancer.prototype = Object.create(Dancer.prototype);
@@ -18,21 +17,11 @@ SnakeDancer.prototype.step = function(){
   // } else {
   //   this.grow();
   // }
-  this.counter++;
+  this.move();
 };
 
-SnakeDancer.prototype.shrink = function(){
-  var shrinking = {
-    width: 20,
-    height: 20
-  };
-  this.$node.css(shrinking);
-};
-
-SnakeDancer.prototype.grow = function(){
-  var growing = {
-    width: 140,
-    height: 140
-  };
-  this.$node.css(growing);
+SnakeDancer.prototype.move = function(){
+  this.$node.animate({
+    top: '-=25'
+  });
 };

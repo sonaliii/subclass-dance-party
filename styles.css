@@ -37,8 +37,8 @@ body, a:link, a:visited, a:active{
 }
 
 .snake{
-  width: 20px;
-  height: 200px;
+  width: 15px;
+  height: 300px;
   background: black;
   border-width: 2px;
   border-style: solid;
