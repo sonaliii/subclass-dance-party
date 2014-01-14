@@ -3,8 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image:url('src/wallpaper.jpg');
   font-size: 18px;
+  background-size: contain;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -24,4 +25,27 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.square{
+  width: 140px;
+  height: 140px;
+  background: blue;
+  border-width: 20px;
+  border-color: white;
+  position: absolute;
+  border-style:dotted solid double dashed;
+}
+
+.snake{
+  width: 20px;
+  height: 200px;
+  background: black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  position: absolute;
+  border-top-left-radius: 20px 60px;
+  border-top-right-radius: 20px 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
